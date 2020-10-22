@@ -31,7 +31,7 @@ int normal(){
     float speed = 100.00;
     int resist = -1;
     FILE* fp = fopen("./normal.csv", "w+");
-    fprintf(fp, "time,speed\n0,100.00\n");
+    fprintf(fp, "0,100.00\n");
 
     for(i=1; i<=500; i++){
         speed += (float)resist + option(speed, 1);
@@ -48,9 +48,9 @@ int error(){
     float speed = 100.0;
     int resist = -1;
     FILE* fp = fopen("./error.csv", "w+");
-    fprintf(fp, "time,speed\n0,100.00\n");
+    fprintf(fp, "0,100.00\n");
     
-    for(i=1; i<=50; i++){
+    for(i=1; i<=500; i++){
         speed += resist + option(speed, 0);
         fprintf(fp, "%d,%.2f\n", i, speed);
     }
